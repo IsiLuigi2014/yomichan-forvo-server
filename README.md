@@ -40,6 +40,9 @@ Yomichan Forvo Server supports a few configuration options, which you can edit b
 - Anki Add-on page: https://ankiweb.net/shared/info/580654285
 
 ## Changelog
+### 2026-04-20
+- resolved issue with cloudflare protection, added cloudscraper dependency
+  
 ### 2024-07-15
 - add support for preferred countries
 
