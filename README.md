@@ -9,7 +9,7 @@ Simple server to take advantage of Yomichan's custom audio sources feature. Requ
 Prerequisites:
 
 - Anki
-- Yomichan
+- Yomichan/Yomitan (current version of Yomichan)
 - Anki Connect
 
 Install:
