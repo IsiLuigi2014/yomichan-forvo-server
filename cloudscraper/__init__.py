@@ -9,7 +9,7 @@ from typing import Optional, Dict, Any, Union, List
 
 from requests.adapters import HTTPAdapter
 from requests.sessions import Session
-from requests_toolbelt.utils import dump
+from ..requests_toolbelt.utils import dump
 
 # ------------------------------------------------------------------------------- #
 
