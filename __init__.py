@@ -6,6 +6,7 @@ import json
 import base64
 import threading
 
+import cloudscraper
 from http import HTTPStatus
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
@@ -16,6 +17,10 @@ from typing import List
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
+"""
+-- Update 2026-04-20 --
+- Included cloudscraper 3.0.0 for resolving clouldflare protection
+"""
 
 # Config default values
 @dataclass
@@ -47,9 +52,11 @@ class Forvo():
 
     def _set_session(self):
         """
+        Creating scraper
         Sets the session with basic backoff retries.
         Put in a separate function so we can try resetting the session if something goes wrong
         """
+        scraper = cloudscraper.create_scraper()
         retry_strategy = Retry(
             total=3,
             backoff_factor=1,
@@ -57,13 +64,13 @@ class Forvo():
             allowed_methods=["HEAD", "GET", "OPTIONS"]
         )
         adapter = HTTPAdapter(max_retries=retry_strategy)
-        self.session = requests.Session()
+        self.session = scraper
         self.session.mount("https://", adapter)
         self.session.mount("http://", adapter)
         # Use my personal user agent to try to avoid scraping detection
         self.session.headers.update(
             {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.27",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Gecko/20100101 Firefox/149.0",
                 "Accept-Language": "en-US,en;q=0.5",
             }
         )
