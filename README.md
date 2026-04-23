@@ -15,10 +15,10 @@ Prerequisites:
 Install:
 
 ~~1. Copy the code and install like you would for any other Anki addon~~
-1. Download this repository and move it in your Anki addons directory in a new folder (Windows: %APPDATA%\Anki2\addons21 | Linux: \home\user\.local\Anki2\addons21)
+1. Download this repository and move it in your Anki addons directory in a new folder (Windows: `%APPDATA%\Anki2\addons21` | Linux: `\home\user\.local\Anki2\addons21`)
 2. Restart Anki
 3. Allow network connections (required since this is a local server)
-4. In yomichan settings, go to Audio > Configure Audio Playback Sources > Custom Audio Source
+4. In yomichan settings, go to Audio > Configure Audio Playback Sources > Custom Audio Source (JSON)
 5. Select Type as JSON and set URL to http://localhost:8770/?term={term}&reading={reading}
 6. In your Audio Sources list below, make sure one of them is set to Custom
 
