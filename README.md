@@ -14,7 +14,8 @@ Prerequisites:
 
 Install:
 
-1. Copy the code and install like you would for any other Anki addon
+~~1. Copy the code and install like you would for any other Anki addon~~
+1. Download this repository and move it in your Anki addons directory in a new folder (Windows: %APPDATA%\Anki2\addons21 | Linux: \home\user\.local\Anki2\addons21)
 2. Restart Anki
 3. Allow network connections (required since this is a local server)
 4. In yomichan settings, go to Audio > Configure Audio Playback Sources > Custom Audio Source
@@ -36,8 +37,8 @@ Yomichan Forvo Server supports a few configuration options, which you can edit b
 
 ## Links
 
-- GitHub: https://github.com/jamesnicolas/yomichan-forvo-server
-- Anki Add-on page: https://ankiweb.net/shared/info/580654285
+- Original GitHub: https://github.com/jamesnicolas/yomichan-forvo-server
+- ~~Anki Add-on page: https://ankiweb.net/shared/info/580654285~~
 
 ## Changelog
 ### 2026-04-20
